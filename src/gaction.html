@@ -1,0 +1,41 @@
+<link rel="import"  href="https://polygit.org/components/polymer/polymer-element.html">
+
+<dom-module id="g-action">
+
+<!-- Google Fonts -->
+<link rel="import" type="css" href="http://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+<!-- CSS Reset -->
+<link rel="import" type="css" href="http://cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+<!-- Milligram CSS minified -->
+<link rel="import" type="css" href="http://cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+<!-- You should properly set the path from the main file. -->
+<link rel="import" type="css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+
+<template>
+<div class="row">
+  <div class="column">
+    <span hidden?="{{research}}" class="research">{{research}} <i class="fa fa-lightbulb-o" aria-hidden="true"></i></span> 
+    <span class="power">{{power}} <i class="fa fa-star-o" aria-hidden="true"></i></span> 
+    <span class="title">{{title}}: </span>
+    <span class="description">{{description}}</span>
+  </div>
+</div>
+</template>
+
+  <script>
+    class Gaction extends Polymer.Element {
+      static get is() { return "g-action"; }
+      static get properties() {
+        return {
+          title: { type: String, value: "Undefined"},
+          research: { type: String, value: "Undefined"},
+          power: { type: String, value: "Undefined"},
+          description: { type: String, value: "Undefined"}
+        };
+      } 
+    }
+    customElements.define(Gaction.is, Gaction);
+  </script>
+
+</dom-module>

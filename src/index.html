@@ -1,0 +1,133 @@
+<script src="https://polygit.org/components/webcomponentsjs/webcomponents-loader.js"></script>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<!-- Google Fonts -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+<!-- CSS Reset -->
+<link rel="stylesheet" href="http://cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+<!-- Milligram CSS minified -->
+<link rel="stylesheet" href="http://cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+<!-- You should properly set the path from the main file. -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+<link rel="import" href="gtag.html">
+<link rel="import" href="gaction.html">
+
+
+<div id="data">
+<h1>TesT</h1>
+<g-tag icon="cannon.gif" research="0" power="3" title="Republic Artillery Battalion" 
+  shield="0" laser="0" atomics="0" hull="1" description="Long range artillery">
+  <div slot="actions">
+    <g-action power="2" research="0" title="volley" 
+      description="deal 2 hull damage to entity in adjacent system"/>
+  </div>
+</g-tag>
+
+<g-tag icon="bomber.gif" research="0" power="3"  title="Republic Bomber Squad" 
+  shield="2" laser="0" atomics="3" hull="2" description="Bomber units">
+  <div slot="actions">
+    <g-action power="2" research="0" title="precision strike" 
+      description="deal 4 hull damage to entity in this system"/> 
+  </div>
+</g-tag>
+<g-tag icon="200.gif" research="0" power="3" title="Republic Fighter Squad" 
+  shield="3" laser="1" atomics="1" hull="1" description="">
+  <div slot="actions">
+    <g-action power="0" research="0" title="coordinated strikes" 
+      description="+1 laser and +1 atomics for each Republic Fighter Squad you control in this system"/>
+  </div>
+</g-tag>
+<g-tag icon="400.gif" research="0" power="3" title="Republic Drone Squad" 
+  shield="0" laser="0" atomics="0" hull="1" description="">
+  <div slot="actions">
+    <g-action power="0" research="2" title="upgrade" 
+      description="permanently add one point to any stat, this action can only be performed twice"/>
+  </div>
+
+</g-tag>
+
+<g-tag icon="recondrone.gif" research="2" power="1" title="Republic Recon Drone" 
+  shield="0" laser="0" atomics="0" hull="1" description="">
+  <div slot="actions">
+    <g-action power="0" research="2" title="field recon" 
+      description="Each Republic ship you control in this system receives +1 laser. This does not apply to ships with laser of 0."/> 
+    <g-action power="0" research="2" title="hull recon" 
+      description="Each Republic ship you control in this system receives +1 atomics. This does not apply to ships with atomics of 0."/> 
+  </div>
+
+</g-tag>
+
+<g-tag icon="goliath.gif" research="4" power="6" title="Goliath (Republic Battlecruiser)" 
+  shield="8" laser="8" atomics="8" hull="6" description="">
+  <div slot="actions">
+  </div>
+</g-tag>
+
+<g-tag icon="militaryoutpost.gif" research="0" power="0" title="Military Outpost" 
+  shield="4" laser="0" atomics="0" hull="6" description="">
+  <div slot="actions">
+  </div>
+</g-tag>
+
+<g-tag icon="researchoutpost.gif" research="0" power="0" title="Research Outpost" 
+  shield="4" laser="0" atomics="0" hull="6" description="">
+  <div slot="actions">
+  </div>
+</g-tag>
+
+<g-tag icon="nebula.gif" research="0" power="0" title="Nebula" 
+  shield="-" laser="-" atomics="-" hull="-" description="">
+  <div slot="actions">
+    Connected nebulas are considered one system
+  </div>
+</g-tag>
+
+<g-tag icon="phasar.gif" research="0" power="0" title="Pulsar" 
+  shield="-" laser="-" atomics="-" hull="-" description="">
+  <div slot="actions">
+    While ships are in this system their shields are reduced to zero.
+  </div>
+</g-tag>
+
+<g-tag icon="empty.gif" research="0" power="0" title="Empty Space" 
+  shield="-" laser="-" atomics="-" hull="-" description="">
+  <div slot="actions">
+    Ships can pass through empty space without using a movement
+  </div>
+</g-tag>
+
+<g-tag icon="ancient.gif" research="0" power="0" title="Forgotten Civilization" 
+  shield="-" laser="-" atomics="-" hull="-" description="">
+  <div slot="actions">
+    Forgotten Civilizations cannot be placed adjacent to an existing Forgotten Civlization.
+    All forgotten civlizations are connected by jump gates. Ships can jump from one to any
+    other forgotten civilization.
+  </div>
+</g-tag>
+
+<g-tag icon="deadsystem.gif" research="0" power="0" title="Dead System" 
+  shield="-" laser="-" atomics="-" hull="-" description="">
+  <div slot="actions">
+    Dead systems can only have three adjacent systems connected to them. Dead systems cannot
+    be placed adjacent to another dead system.
+  </div>
+</g-tag>
+
+<g-tag icon="civilization.gif" research="0" power="0" title="Alien Homeworld " 
+  shield="-" laser="-" atomics="-" hull="-" description="">
+  <div slot="actions">
+    Two stations can be placed at this location. If any ships enter this system
+    destroy both stations.
+  </div>
+</g-tag>
+
+
+
+
+
+</div>
