@@ -1,0 +1,57 @@
+<div class="row">
+  <div class="gtag" style="background-image:url('img/{{@data.icon}}')">
+    {{#if @data.power}} 
+      <div class="attribute power">
+        <div class="icon pull-left"><i class="fa fa-star-o" aria-hidden="true"></i></div>
+        <div class="value">{{@data.power}}</div> 
+      </div>
+    {{/if}} 
+
+    {{#if @data.research}} 
+      <div class="attribute research">
+        <div class="icon pull-left"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></div>
+        <div class="value">{{@data.research}}</div> 
+      </div>
+    {{/if}} 
+
+    {{#if @data.hull}} 
+      <div class="attribute hull">
+        <div class="icon pull-left"><i class="fa fa-square-o" aria-hidden="true"></i></div>
+        <div class="value">{{@data.hull}}</div> 
+      </div>
+    {{/if}} 
+
+    {{#if @data.shield}} 
+      <div class="attribute shield">
+        <div class="icon pull-left"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div>
+        <div class="value">{{@data.shield}}</div> 
+      </div>
+    {{/if}} 
+
+    {{#if @data.laser}} 
+      <div class="attribute laser">
+        <div class="icon pull-left"><i class="fa fa-bolt" aria-hidden="true"></i></div>
+        <div class="value">{{@data.laser}}</div> 
+      </div>
+    {{/if}} 
+
+    {{#if @data.atomic}} 
+      <div class="attribute atomic">
+        <div class="icon pull-left"><i class="fa fa-rocket" aria-hidden="true"></i></div>
+        <div class="value">{{@data.atomic}}</div> 
+      </div>
+    {{/if}} 
+
+    <div class="title">{{@data.title}}</div>
+  </div>
+</div>
+{{#if @data.description}} 
+<div style="background-color:#000;color:#dedede;width:470px;padding:5px">
+   {{@data.description}}
+</div>
+{{/if}} 
+{{#each @data.abilities key="@index" as |ability|}}
+  {{ability.description}}
+{{/each}}
+
+

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>xs</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{content-for "head"}}
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="http://cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <!-- Milligram CSS minified -->
+    <link rel="stylesheet" href="http://cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+    <!-- You should properly set the path from the main file. -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+
+    <link rel="stylesheet" href="{{rootURL}}app.css">
+
+<style> 
+.gtag {
+  height:240px;
+  width:480px;
+  border:1px solid black;
+  position:relative;
+  background-color:#ff757057;
+  background-size:cover;
+  color:black;
+}
+.gdetails {
+  background-color:#dedede;
+
+}
+.gtag .title {
+  position:absolute;
+  left:5px;
+  bottom:5px;
+  font-weight:bold;
+  color:white;
+  background-color:black;
+  padding-left:10px;
+  padding-right:10px;
+
+}
+.attribute {
+  width:70px;
+}
+.attribute .icon {
+  width:35px;
+  margin-right:5px;
+  color:white;
+  text-align:center;
+}
+.attribute .value {
+  background-color:black;
+  color:white;
+  font-weight:bold;
+  border-right:2px solid #666;
+}
+.power .icon {
+  background-color:#5e8e37;
+  color:#fff200;
+} 
+.hull .icon {
+  background-color:#b25533;
+  color:#ff9000;
+}
+.shield .icon {
+  background-color:#004d77;
+  color:#dedede;
+}
+.laser .icon {
+  background-color:#ff3300;
+  color:#dedede;
+} 
+.atomic .icon {
+  color:#ffee00;
+  background-color:#3a3a3a;
+}
+.research .icon {
+  color:#005668;
+  background-color:#dedede;
+}
+
+.board .row .column {
+  flex: 0 0 120px;
+  width:120px;
+  height:60px;
+  border:1px solid #272e3d;
+  background-color:#1b1e23;
+  background-size:cover;
+}
+.board .row .odd {
+  background-color:#161719;
+}
+
+
+</style>
+
+    {{content-for "head-footer"}}
+  </head>
+  <body style="background-color:#333">
+    {{content-for "body"}}
+
+    <div id="app">
+    </div>
+    <script src="{{rootURL}}app.js"></script>
+
+    {{content-for "body-footer"}}
+  </body>
+</html>

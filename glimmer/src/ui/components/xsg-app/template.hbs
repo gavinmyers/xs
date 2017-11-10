@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="column">
+      <button onclick={{action viewTags}} class="button button-outline">Cards</button>
+      <button onclick={{action viewBoard}} class="button button-outline">Board</button>
+    </div>
+    <div class="column">
+    </div>
+    <div class="column">{{view}}</div> 
+    <div class="column"></div>
+  </div>
+</div>
+
+{{#if isTags}} 
+<div class="tags">
+{{#each tags key="@index" as |tag|}}
+  <xs-tag @data={{ tag }}></xs-tag> 
+{{/each}}
+</div>
+{{/if}}
+
+{{#if isBoard}}
+<div class="board" id="chess">
+{{#each rows key="@index" as |row|}}
+  <div class="row"> 
+    {{#each columns key="@index" as |column|}}
+        <xs-tile/>
+    {{/each}}
+  </div>
+{{/each}}
+</div>
+{{/if}}
