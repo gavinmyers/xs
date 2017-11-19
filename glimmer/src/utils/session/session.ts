@@ -5,4 +5,3 @@ export default class Session {
     TagLibrary.init()
   }
 }
-

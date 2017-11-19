@@ -1,57 +1,67 @@
 <div class="row">
   <div class="gtag" style="background-image:url('img/{{@data.icon}}')">
-    {{#if @data.power}} 
+    {{#if @data.power}}
       <div class="attribute power">
         <div class="icon pull-left"><i class="fa fa-star-o" aria-hidden="true"></i></div>
-        <div class="value">{{@data.power}}</div> 
+        <div class="value">{{@data.power}}</div>
       </div>
-    {{/if}} 
+    {{/if}}
 
-    {{#if @data.research}} 
+    {{#if @data.research}}
       <div class="attribute research">
         <div class="icon pull-left"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></div>
-        <div class="value">{{@data.research}}</div> 
+        <div class="value">{{@data.research}}</div>
       </div>
-    {{/if}} 
+    {{/if}}
 
-    {{#if @data.hull}} 
+    {{#if @data.hull}}
       <div class="attribute hull">
         <div class="icon pull-left"><i class="fa fa-square-o" aria-hidden="true"></i></div>
-        <div class="value">{{@data.hull}}</div> 
+        <div class="value">{{@data.hull}}</div>
       </div>
-    {{/if}} 
+    {{/if}}
 
-    {{#if @data.shield}} 
+    {{#if @data.shield}}
       <div class="attribute shield">
         <div class="icon pull-left"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div>
-        <div class="value">{{@data.shield}}</div> 
+        <div class="value">{{@data.shield}}</div>
       </div>
-    {{/if}} 
+    {{/if}}
 
-    {{#if @data.laser}} 
+    {{#if @data.laser}}
       <div class="attribute laser">
         <div class="icon pull-left"><i class="fa fa-bolt" aria-hidden="true"></i></div>
-        <div class="value">{{@data.laser}}</div> 
+        <div class="value">{{@data.laser}}</div>
       </div>
-    {{/if}} 
+    {{/if}}
 
-    {{#if @data.atomic}} 
+    {{#if @data.atomic}}
       <div class="attribute atomic">
         <div class="icon pull-left"><i class="fa fa-rocket" aria-hidden="true"></i></div>
-        <div class="value">{{@data.atomic}}</div> 
+        <div class="value">{{@data.atomic}}</div>
       </div>
-    {{/if}} 
+    {{/if}}
 
     <div class="title">{{@data.title}}</div>
   </div>
 </div>
-{{#if @data.description}} 
-<div style="background-color:#000;color:#dedede;width:470px;padding:5px">
+{{#if @data.description}}
+<div style="background-color:#000;color:#dedede;width:470px;padding:5px;font-weight:bold;">
    {{@data.description}}
 </div>
-{{/if}} 
+{{/if}}
 {{#each @data.abilities key="@index" as |ability|}}
+<div class="row" style="width:480px;background-color:#f8f9e0;border-bottom:2px solid #000;">
+  <div class="column column-10" style="border-right:2px solid #000;">
+  {{#if ability.power}}
+      <i class="fa fa-star-o" aria-hidden="true"></i>{{ability.power}}
+  {{/if}}
+  {{#if ability.research}}
+      <i class="fa fa-lightbulb-o" aria-hidden="true"></i>{{ability.research}}
+  {{/if}}
+  </div>
+  <div class="column">
   {{ability.description}}
+  </div>
+</div>
 {{/each}}
-
-
