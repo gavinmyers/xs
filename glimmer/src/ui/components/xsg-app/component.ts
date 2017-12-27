@@ -16,11 +16,37 @@ export default class Xsg extends Component {
     for(var x = 0; x < 12; x++) {
       this.tiles[x] = [];
       for(var y = 0; y < 12; y++) {
-        console.log(TileLibrary.get("UNDEFINED"));
-        this.tiles[x][y] = TileLibrary.get("UNDEFINED")
+        var tile = TileLibrary.get("UNDEFINED")
+        tile.x = x
+        tile.y = y
+        this.tiles[x][y] = tile
       }
     }
+    this.appOnClick = this.appOnClick.bind(this)
   }
+
+  appOnClick(data) {
+
+    var tile = TileLibrary.get("BLOCK")
+    var x = data.x
+    var y = data.y
+    this.tiles[x][y] = tile
+    this.resetTiles() //HACK
+  }
+
+  resetTiles() {
+    var newTiles = []
+    for(var x = 0; x < 12; x++) {
+      newTiles[x] = [];
+      for(var y = 0; y < 12; y++) {
+        newTiles[x][y] = this.tiles[x][y]
+      }
+    }
+    this.tiles = []
+    this.tiles = newTiles
+  }
+
+
   @tracked tags = []
 
   @tracked tiles = []

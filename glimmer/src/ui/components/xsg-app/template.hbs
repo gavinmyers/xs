@@ -33,7 +33,7 @@
 {{#each tiles key="@index" as |row|}}
   <div class="row">
     {{#each row key="@index" as |tile|}}
-        <xs-tile @data={{ tile }}></xs-tile>
+        <xs-tile @data={{ tile }} @onClick={{ appOnClick }}></xs-tile>
     {{/each}}
   </div>
 {{/each}}

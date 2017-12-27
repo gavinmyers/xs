@@ -5,7 +5,9 @@ TileLibrary.loadTile("UNDEFINED", function() {
       "id":"UNDEFINED",
       "icon":"",
       "name":"Empty Tile",
-      "title":"Empty Tile"
+      "title":"Empty Tile",
+      "x":0,
+      "y":0
   }
 })
 
@@ -14,7 +16,9 @@ TileLibrary.loadTile("BLOCK", function() {
       "id":"BLOCK",
       "icon":"",
       "name":"Blocked Tile",
-      "title":"Blocked Tile"
+      "title":"Blocked Tile",
+      "x":0,
+      "y":0
   }
 })
 
@@ -23,6 +27,8 @@ TileLibrary.loadTile("OPEN", function() {
       "id":"OPEN",
       "icon":"",
       "name":"Open Tile",
-      "title":"Open Tile"
+      "title":"Open Tile",
+      "x":0,
+      "y":0      
   }
 })

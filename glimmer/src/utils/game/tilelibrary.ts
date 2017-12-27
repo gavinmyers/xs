@@ -14,10 +14,8 @@ export default class TileLibrary {
 
     if(TileLibrary.tiles == null) {
       throw new Error("The entire tile library is null")
-      return null
     } else if(TileLibrary.tiles[id] == null) {
       throw new Error("Unable to find tile of " + id + " was the tile loaded in index.ts?")
-      return null
     } else {
       return TileLibrary.tiles[id]()
     }
