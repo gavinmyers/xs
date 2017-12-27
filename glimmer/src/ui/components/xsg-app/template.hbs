@@ -6,25 +6,34 @@
     </div>
     <div class="column">
     </div>
-    <div class="column">{{view}}</div> 
+    <div class="column">{{view}}</div>
     <div class="column"></div>
   </div>
 </div>
 
-{{#if isTags}} 
+{{#if isTags}}
 <div class="tags">
 {{#each tags key="@index" as |tag|}}
-  <xs-tag @data={{ tag }}></xs-tag> 
+  <xs-tag @data={{ tag }}></xs-tag>
 {{/each}}
 </div>
 {{/if}}
 
 {{#if isBoard}}
+<div class="container">
+  <div class="row">
+    <div class="column">
+      <button onclick={{action viewTags}} class="button button-outline">Place Black Tile</button>
+      <button onclick={{action viewBoard}} class="button button-outline">Place White Tile</button>
+      <button onclick={{action viewBoard}} class="button button-outline">Place Card on Tile</button>
+    </div>
+  </div>
+</div>
 <div class="board" id="chess">
-{{#each rows key="@index" as |row|}}
-  <div class="row"> 
-    {{#each columns key="@index" as |column|}}
-        <xs-tile/>
+{{#each tiles key="@index" as |row|}}
+  <div class="row">
+    {{#each row key="@index" as |tile|}}
+        <xs-tile @data={{ tile }}></xs-tile>
     {{/each}}
   </div>
 {{/each}}

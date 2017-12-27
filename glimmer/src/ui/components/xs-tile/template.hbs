@@ -1,6 +1,4 @@
-{{#if @icon}}
-<div class="column" style="background-image:url('img/{{@icon}}')"></div>
-{{else}}
-<div class="column" style="background-color:#111">&nbsp;</div>
-{{/if}}
 
+<div class="column" onclick={{action changeTile}} style="background-color:#333;border:2px solid #666;">
+  {{@data.id}}
+</div>

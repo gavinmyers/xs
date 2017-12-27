@@ -1,8 +1,22 @@
-export default class RepublicDroneSquad {
-  static id = "rds"
-  static instance() {
+import TagLibrary from "../../utils/game/taglibrary"
+
+TagLibrary.loadTag("REP_ab", function() {
     return {
-        "id":this.id,
+        "id":"REP_ab",
+        "icon":"100.gif",
+        "name":"Artillery ",
+        "title":"Republic Artillery Battalion",
+        "power":4,
+        "laser":4,
+        "atomic":3,
+        "hull":20,
+        "shield":99
+    }
+  })
+
+TagLibrary.loadTag("REP_ds", function() {
+    return {
+        "id":"REP_ds",
         "icon":"200.gif",
         "name":"Drone ",
         "title":"Republic Drone Squad",
@@ -25,5 +39,4 @@ export default class RepublicDroneSquad {
 
         ]
     }
-  }
-}
+  })

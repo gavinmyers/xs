@@ -1,21 +1,25 @@
-import RepublicArtilleryBattalion from "../../utils/tags/RepublicArtilleryBattalion"
-import RepublicDroneSquad from "../../utils/tags/RepublicDroneSquad"
-
 export default class TagLibrary {
-  static tags = null 
+  static tags = {}
   static init() {
-    TagLibrary.tags = {}
-    TagLibrary.loadTag(RepublicArtilleryBattalion)
-    TagLibrary.loadTag(RepublicDroneSquad)
   }
-  static loadTag(c) {
-    TagLibrary.tags[c.id] = c
-  }
-  static get(id) {
-    if(TagLibrary.tags === null) {
-      TagLibrary.init()
+
+  static loadTag(id, ret) {
+    if(TagLibrary.tags[id] != null) {
+      throw new Error("The TagLibrary already contains something like this!!!");
     }
-    return TagLibrary.tags[id].instance()
+    TagLibrary.tags[id] = ret
+  }
+
+  static get(id) {
+
+    if(TagLibrary.tags == null) {
+      throw new Error("The entire tag library is null")
+      return null
+    } else if(TagLibrary.tags[id] == null) {
+      throw new Error("Unable to find tag of " + id + " was the tag loaded in index.ts?")
+      return null
+    } else {
+      return TagLibrary.tags[id]()
+    }
   }
 }
-
