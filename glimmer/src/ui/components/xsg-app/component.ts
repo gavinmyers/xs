@@ -39,15 +39,7 @@ export default class Xsg extends Component {
   }
 
   HACK_resetTiles() {
-    var newTiles = []
-    for(var x = 0; x < 12; x++) {
-       newTiles.push([])
-      for(var y = 0; y < 12; y++) {
-        var tile = this.tiles[x][y]
-        newTiles[x].push(tile)
-      }
-    }
-    this.tiles = newTiles
+    this.tiles = this.tiles.slice()
   }
 
 

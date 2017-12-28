@@ -4,13 +4,16 @@ h1 {
 
 
 .UNDEFINED {
-  background-color:#333;border:2px solid #666;
+  background-color:#333;border:2px solid #444;
 }
 
 .BLOCK {
-  background-color:#f9f9f9;border:2px solid #d1ffec;
+  background-color:#f9f9f9;border:2px solid #f9f9f9;
 }
 
+.OPEN {
+  background-color:#999;border:2px solid #999;
+}
 
 .gtag {
   height:240px;
