@@ -14,37 +14,42 @@ export default class Xsg extends Component {
     this.tags.push(TagLibrary.get("SYS_es"))
 
     for(var x = 0; x < 12; x++) {
-      this.tiles[x] = [];
+      this.tiles.push([])
       for(var y = 0; y < 12; y++) {
         var tile = TileLibrary.get("UNDEFINED")
         tile.x = x
         tile.y = y
-        this.tiles[x][y] = tile
+        this.tiles[x].push(tile)
       }
     }
     this.appOnClick = this.appOnClick.bind(this)
   }
 
   appOnClick(data) {
-
     var tile = TileLibrary.get("BLOCK")
+    if(data.id === "BLOCK") {
+      tile = TileLibrary.get("OPEN")
+    }
     var x = data.x
     var y = data.y
+    tile.x = x
+    tile.y = y
     this.tiles[x][y] = tile
-    this.resetTiles() //HACK
+    this.HACK_resetTiles()
   }
 
-  resetTiles() {
+  HACK_resetTiles() {
     var newTiles = []
     for(var x = 0; x < 12; x++) {
-      newTiles[x] = [];
+       newTiles.push([])
       for(var y = 0; y < 12; y++) {
-        newTiles[x][y] = this.tiles[x][y]
+        var tile = this.tiles[x][y]
+        newTiles[x].push(tile)
       }
     }
-    this.tiles = []
     this.tiles = newTiles
   }
+
 
 
   @tracked tags = []

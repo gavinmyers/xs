@@ -1,3 +1,87 @@
 h1 {
   color: #444;
 }
+
+
+.UNDEFINED {
+  background-color:#333;border:2px solid #666;
+}
+
+.BLOCK {
+  background-color:#f9f9f9;border:2px solid #d1ffec;
+}
+
+
+.gtag {
+  height:240px;
+  width:480px;
+  border:1px solid black;
+  position:relative;
+  background-color:#ff757057;
+  background-size:cover;
+  color:black;
+}
+.gdetails {
+  background-color:#dedede;
+
+}
+.gtag .title {
+  position:absolute;
+  left:5px;
+  bottom:5px;
+  font-weight:bold;
+  color:white;
+  background-color:black;
+  padding-left:10px;
+  padding-right:10px;
+
+}
+.attribute {
+  width:70px;
+}
+.attribute .icon {
+  width:35px;
+  margin-right:5px;
+  color:white;
+  text-align:center;
+}
+.attribute .value {
+  background-color:black;
+  color:white;
+  font-weight:bold;
+  border-right:2px solid #666;
+}
+.power .icon {
+  background-color:#5e8e37;
+  color:#fff200;
+}
+.hull .icon {
+  background-color:#b25533;
+  color:#ff9000;
+}
+.shield .icon {
+  background-color:#004d77;
+  color:#dedede;
+}
+.laser .icon {
+  background-color:#ff3300;
+  color:#dedede;
+}
+.atomic .icon {
+  color:#ffee00;
+  background-color:#3a3a3a;
+}
+.research .icon {
+  color:#005668;
+  background-color:#dedede;
+}
+
+.board .row .column {
+  flex: 0 0 120px;
+  width:120px;
+  height:60px;
+  background-size:cover;
+}
+.board .row .odd {
+
+}
