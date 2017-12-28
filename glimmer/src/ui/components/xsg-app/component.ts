@@ -35,14 +35,8 @@ export default class Xsg extends Component {
     tile.x = x
     tile.y = y
     this.tiles[x][y] = tile
-    this.HACK_resetTiles()
+    this.tiles = this.tiles.slice() //hack
   }
-
-  HACK_resetTiles() {
-    this.tiles = this.tiles.slice()
-  }
-
-
 
   @tracked tags = []
 
